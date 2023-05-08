@@ -8,12 +8,11 @@
 .counter{
   text-align: center;
   background-color: rgb(204, 63, 86);
-  width: 300px;
+  width: 200px;
   height: 300px;
   display: flex;
   flex-direction: column;
-
-  
+  flex-wrap: wrap;  
   justify-content: center;
   align-items: center;
   
@@ -23,11 +22,28 @@
 }
 .App{
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 5px;
+   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-column-gap: 6px;
+  grid-row-gap:6px;
+
+
 }
 .btn{
   width: 80px;
 
 
+}
+
+
+.meh{display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: scroll;
+  overflow-x: hidden;
+  
+
+}
+.meh button{
+  position:fixed;
+  top: 0px;
 }

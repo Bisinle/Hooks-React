@@ -31,7 +31,10 @@ console.log(names);
       type='text' 
       onChange={HandleChange} name='lastName'/>
 
-      <h2>{JSON.stringify(names)}</h2>
+      <h4>fName: {names.firstName}</h4> 
+      <h4>lName: {names.lastName}</h4> 
+
+      {/* <h2>{JSON.stringify(names)}</h2>  this is to display what ever our state variable is storing as it is storing it */}
       
 
       
