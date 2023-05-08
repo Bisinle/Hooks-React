@@ -2,20 +2,38 @@ import React from 'react'
 import { useState } from 'react'
 
 export default function ObjectCounter() {
-  const [name, setName ]= useState ({
+  //my state and it's objects
+  const [names, setNames ]= useState ({
     firstName:'',
     lastName: ''
   })
+
+function HandleChange(e){
+  const name = e.target.name
+  const value = e.target.value
+  setNames((prev)=>{
+    return{...prev, [name]:value}
+  })
+  
+ 
+}
+console.log(names);
   return (
     <form className='counter'>
+
+      
+      <label>firstName</label>
+      
       <input 
       type='text' 
-      onChange={(e)=>setName({firstName:e.target.value})} />
+      onChange={HandleChange} name='firstName'/>
+       <label>lastName</label>
       <input 
       type='text' 
-      onChange={(e)=>setName({lastName:e.target.value})} />
-      <h2>firstname: {name.firstName}</h2>
-      <h2>lastname: {name.lastName}</h2>
+      onChange={HandleChange} name='lastName'/>
+
+      <h2>{JSON.stringify(names)}</h2>
+      
 
       
     </form>
