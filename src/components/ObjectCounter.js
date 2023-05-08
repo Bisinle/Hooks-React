@@ -9,8 +9,7 @@ export default function ObjectCounter() {
   })
 
 function HandleChange(e){
-  const name = e.target.name
-  const value = e.target.value
+  const {name,value}=e.target
   setNames((prev)=>{
     return{...prev, [name]:value}
   })
@@ -39,3 +38,15 @@ console.log(names);
     </form>
   )
 }
+/**
+this is to individually update eache object propert and then merge them togehter using the spread operatior
+<input 
+type='text' 
+onChange={(e) =>setNames({...names,firstName: e.target.value})} 
+name='firstName'/>
+ <label>lastName</label>
+<input 
+type='text' 
+onChange={(e) =>setNames({...names,lastName: e.target.value})} 
+name='lastName'/>
+ */
