@@ -20,12 +20,15 @@ const handleChange =()=>{
 const [show, setShow]= useState (false)
 const [changeBUTTONtext, setCahangeBUTTONtext]= useState (true)
 
-
+//function to update our states with the oposite boolean value
 function hide_show_content(){
   setCahangeBUTTONtext (!changeBUTTONtext)
   setShow (!show )
 
 }
+
+//if the changeBUTTONtext state value is true, display "show" on the button, else display "hide" the button
+//and when ever the button is clicked the value changes from one boolean value  to another
 var buttonText = changeBUTTONtext? 'show' : 'hide'
 
 
@@ -41,7 +44,10 @@ var buttonText = changeBUTTONtext? 'show' : 'hide'
 
       <button onClick={hide_show_content}> {buttonText} content</button>
       <div >     
-      {show ? <Visibility_Toggle_Content/>: null}
+      {
+      //if our show state initial value is true, call what ever that is inside the other component and if it's falls diplay NOTHING
+      //and when ever the button is clicked the value changes from one boolean value  to another, the trick here was returning or diplaying the content in here, rather than displaying it in the onClick function
+      show ? <Visibility_Toggle_Content/>: null}
       </div>
    
       </div>
