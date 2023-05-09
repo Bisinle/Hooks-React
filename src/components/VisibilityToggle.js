@@ -4,19 +4,14 @@ import Visibility_Toggle_Content from './Visibility_Toggle_Content'
 
 
 export default function VisibilityToggle({props}) {
-const [visibility, setVisibility] = useState (false)
-const [change, setChange ] = useState ('Allan')
-
-
-
-
 //change the name 
-const handleChange =()=>{
-  if(change ==='Allan'){
-    setChange('Maria')
-  }
+const [changeName, setChangeName ] = useState ('Allan')
 
-  else{setChange('Allan')}
+const handleChange =()=>{
+  if(changeName ==='Allan'){
+    setChangeName('Maria')
+  }
+  else{setChangeName('Allan')}
 }
 
 //toggle the visibility of the text while also changing the the text on the button from SHOWN when 
@@ -38,7 +33,7 @@ var buttonText = changeBUTTONtext? 'show' : 'hide'
     <div className='counter ' >
       <h3>Visibility Toggle</h3>
       <button onClick={handleChange}>change the name</button>
-      <p>{change}</p>
+      <p>{changeName}</p>
 
 
       <p>-------------------</p>  
