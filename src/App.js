@@ -1,4 +1,5 @@
 import './App.css';
+import CharControl from './components/CharControl';
 // import ClassCounter from './components/ClassCounter';
 import FunctionalCounter from './components/FunctionalCounter';
 import ObjectCounter from './components/ObjectCounter';
@@ -16,6 +17,7 @@ function App() {
           <ObjectCounter/>
           <UseStateARRAY/>
           <VisibilityToggle/>
+          <CharControl/>
             
             
 
