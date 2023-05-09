@@ -16,9 +16,10 @@ function HandleChange(e){
   
  
 }
-console.log(names);
+
   return (
     <form className='counter'>
+      <h3>State Object</h3>
 
       
       <label>firstName</label>

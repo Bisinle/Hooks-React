@@ -16,6 +16,7 @@ export default function UseStateARRAY() {
 
   return (
     <div className='counter meh '>
+    <h3>State Array</h3>
       <button onClick={add}>Add a number</button>
       <ul>
        

@@ -15,6 +15,7 @@ export default function FunctionalCounter() {
   }
   return (
     <div className='counter'>
+      <h3>Functional State</h3>
       <h1>{count}</h1>
       <button className='btn' onClick={increment}>increment</button>
       <button className='btn' onClick={()=>setCount(count-1)}>decrement</button>
