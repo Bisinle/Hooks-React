@@ -7,7 +7,10 @@ export default function CharControl() {
 
   function inputHandle (e){
     e.preventDefault()
-    let inputText = Array.from(e.target.value)
+    let Character = e.target.value
+
+    let charnospace = Character.trim()
+    let inputText = Array.from(charnospace)
     setCharCount(inputText.length)
     
   }
