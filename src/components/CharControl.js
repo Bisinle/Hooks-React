@@ -19,7 +19,7 @@ export default function CharControl() {
   return (
     <div className='counter'>
       <h3>Character Counter</h3>
-      <p>display the number of characters typed into to the input field without white-spaces</p>
+      <p>display the number of characters typed into  the input field without white-spaces</p>
       <input type='text' 
       placeholder='Enter text'
       onChange={inputHandle}/>
